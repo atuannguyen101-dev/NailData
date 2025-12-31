@@ -1,0 +1,42 @@
+[
+    {
+        "Label":  "Shape/Almond,Length/Long,Color/Pink,Color/White,Finish/Glossy,Finish/Chrome,Style/Ombre,Art/Abstract,Jewels/No,Theme/Party",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0a295c867104a46d56ff9d51df2ef94e_jpg.rf.5d33b3c761b7516228e07bbbd11bea15.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Squoval,Length/Medium,Color/Pink,Color/White,Finish/Glossy,Style/Ombre,Style/Minimalist,Art/Abstract,Jewels/Yes,Theme/Everyday,Theme/Wedding",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0a3d60d4b1ceaa60923fc74afcbb3ef6_jpg.rf.4707f8783107ade918578d52d57ff857.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Square,Length/Medium,Color/White,Finish/Shimmer,Style/Glamorous,Art/None,Jewels/No,Theme/Party",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0a56b9c7bb0206d778187cbca6159594_jpg.rf.7b8fba35d8961fad09b63ada2e37127b.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Oval,Shape/Round,Length/Short,Color/Nude,Color/Pink,Finish/Glossy,Style/Minimalist,Style/Natural,Art/None,Jewels/No,Theme/Everyday",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0a5ef9abc771b65312b9f0c5f137d129_jpg.rf.7f23fe68c990288916c3d5a5de6537d7.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Stiletto,Length/Long,Color/Pink,Color/Red,Color/Black,Finish/Glossy,Style/French,Style/Ombre,Style/Glamorous,Art/Abstract,Jewels/Yes,Theme/Party",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0a961ae166f89af0904bf3a027e594ad_jpg.rf.1f3778de619678da043c6e8d1c36a2d3.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Almond,Length/Long,Color/Multicolor,Color/Pink,Color/Blue,Color/Purple,Finish/Glossy,Finish/Shimmer,Style/Maximalist,Style/Glamorous,Style/Ombre,Art/Geometric,Art/Abstract,Jewels/No,Theme/Party",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0adb60adca442b97e8de947d274cca33_jpg.rf.fe1ce4758e83eb7e1abd98c5c0192df0.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Squoval,Length/Short,Color/Green,Color/Multicolor,Finish/Matte,Style/Glamorous,Art/Animal Print,Jewels/No,Theme/Everyday,Theme/Seasonal",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0ae671c168c69c024ad801c0ac996baa_jpg.rf.99fe29171120f13b870eead63a97c1e8.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1"
+    },
+    {
+        "Label":  "Shape/Squoval,Length/Medium,Color/Pink,Color/White,Finish/Matte,Style/French,Style/Minimalist,Art/Abstract,Jewels/No,Theme/Everyday,Theme/Wedding",
+        "Url":  "AmlDatastore://workspaceblobstore/UI/2025-12-30_003753_UTC/trained/0b381b6c59f3ccd2d8f8f3f4319c38a1_jpg.rf.a232e52459a74d815d4929756a831c1c.jpg",
+        "LabelConfidence":  "1,1,1,1,1,1,1,1,1,1,1"
+    }
+]

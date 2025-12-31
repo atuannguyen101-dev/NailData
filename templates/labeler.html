@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Image Labeler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .image-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border-radius: 4px;
+            min-height: 400px;
+            margin-bottom: 10px;
+        }
+
+        #mainImage {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 4px;
+        }
+
+        .image-filename {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+
+        .form-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #333;
+            font-size: 13px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .form-group select:hover,
+        .form-group select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+        }
+
+        .btn-save {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-next {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-next:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-undo {
+            background: #ff6b6b;
+            color: white;
+            flex: 0.5;
+        }
+
+        .btn-undo:hover {
+            background: #ff5252;
+        }
+
+        .status-message {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            text-align: center;
+            display: none;
+        }
+
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-panel {
+                max-height: none;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">🎨 Nail Image Labeler</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="statLabeled">0</span>
+                    <span>Labeled</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="statRemaining">0</span>
+                    <span>Remaining</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="statTotal">0</span>
+                    <span>Total</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="image-panel">
+                <div class="image-filename" id="imageFilename">Loading first image...</div>
+                <div class="image-container">
+                    <img id="mainImage" src="" alt="Nail image to label" style="display: none;">
+                    <div class="loading" id="loading">Loading...</div>
+                </div>
+            </div>
+
+            <div class="form-panel">
+                <div class="info-box">
+                    👉 Select features for the current image, then click "Save & Next"
+                </div>
+
+                <div class="status-message" id="statusMessage"></div>
+
+                <form id="labelForm">
+                    <div class="form-group">
+                        <label for="shape">Shape</label>
+                        <select id="shape" name="shape" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="length">Length</label>
+                        <select id="length" name="length" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <select id="color" name="color" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="finish">Finish</label>
+                        <select id="finish" name="finish" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="style">Style</label>
+                        <select id="style" name="style" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="set_style">Set Style</label>
+                        <select id="set_style" name="set_style" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="art">Art/Design</label>
+                        <select id="art" name="art" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jewels">Embellishments</label>
+                        <select id="jewels" name="jewels" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="theme">Theme</label>
+                        <select id="theme" name="theme" required>
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="button-group">
+                    <button type="button" class="btn-save" onclick="saveAndNext()">💾 Save & Next</button>
+                    <button type="button" class="btn-undo" onclick="undoLast()">↶ Undo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentImage = null;
+        let allImages = [];
+        let featureChoices = {};
+
+        async function initializeApp() {
+            // Fetch feature choices and initial data
+            const response = await fetch('/api/images');
+            const data = await response.json();
+            
+            allImages = data.remaining_images || [];
+            
+            // Initialize feature selects
+            const features = ['shape', 'length', 'color', 'finish', 'style', 'set_style', 'art', 'jewels', 'theme'];
+            const formData = new FormData(document.getElementById('labelForm'));
+            
+            // This would normally come from server - for now hardcoded based on your schema
+            featureChoices = {
+                shape: ["Almond", "Oval", "Round", "Square", "Squoval", "Coffin", "Stiletto", "Lipstick", "Flare", "Mountain Peak"],
+                length: ["Short", "Medium", "Long", "Extra Long"],
+                color: ["Clear", "White", "Pink", "Red", "Purple", "Blue", "Green", "Yellow", "Orange", "Brown", "Black", "Nude", "Beige", "Gold", "Silver", "Metallic"],
+                finish: ["Glossy", "Matte", "Chrome", "Shimmer", "Glitter", "Holographic", "Pearl", "Velvet"],
+                style: ["French", "Ombre", "Marble", "Minimalist", "Maximalist", "Glamorous", "Natural", "Artistic", "Edgy"],
+                set_style: ["Uniform", "Accent Nail", "Alternating", "All Different"],
+                art: ["None", "Floral", "Abstract", "Geometric", "Animal Print", "Line Art", "Swirls", "Dots"],
+                jewels: ["None", "Crystals", "Pearls", "Charms", "Foil", "3D Sculpture"],
+                theme: ["Everyday", "Wedding", "Holiday", "Seasonal", "Party", "Vacation", "Date Night"]
+            };
+
+            // Populate selects
+            features.forEach(feature => {
+                const select = document.getElementById(feature);
+                featureChoices[feature].forEach(choice => {
+                    const option = document.createElement('option');
+                    option.value = choice;
+                    option.textContent = choice;
+                    select.appendChild(option);
+                });
+            });
+
+            // Load first image
+            loadNextImage();
+            updateStats(data);
+        }
+
+        async function loadNextImage() {
+            const response = await fetch('/api/images');
+            const data = await response.json();
+            
+            if (!data.next_image) {
+                showStatus('✅ All images labeled!', 'success');
+                document.getElementById('mainImage').style.display = 'none';
+                document.getElementById('loading').textContent = '🎉 All done! No more images to label.';
+                document.querySelector('.btn-save').disabled = true;
+                return;
+            }
+
+            currentImage = data.next_image;
+            allImages = data.remaining_images || [];
+            
+            // Load image
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('mainImage').style.display = 'none';
+            
+            const img = document.getElementById('mainImage');
+            img.onload = () => {
+                document.getElementById('loading').style.display = 'none';
+                img.style.display = 'block';
+            };
+            img.src = `/images/${currentImage}`;
+            
+            document.getElementById('imageFilename').textContent = currentImage;
+            
+            // Reset form
+            document.getElementById('labelForm').reset();
+            
+            updateStats(data);
+        }
+
+        async function saveAndNext() {
+            if (!currentImage) return;
+
+            const form = document.getElementById('labelForm');
+            const formData = new FormData(form);
+
+            // Validate form
+            if (!form.checkValidity()) {
+                showStatus('⚠️ Please fill in all fields', 'error');
+                return;
+            }
+
+            // Prepare data
+            const labelData = {
+                filename: currentImage,
+                shape: formData.get('shape'),
+                length: formData.get('length'),
+                color: formData.get('color'),
+                finish: formData.get('finish'),
+                style: formData.get('style'),
+                set_style: formData.get('set_style'),
+                art: formData.get('art'),
+                jewels: formData.get('jewels'),
+                theme: formData.get('theme')
+            };
+
+            // Save to server
+            try {
+                const response = await fetch('/api/save-label', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(labelData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showStatus(`✅ Labeled: ${currentImage}`, 'success');
+                    setTimeout(() => loadNextImage(), 500);
+                } else {
+                    showStatus('❌ Error saving label', 'error');
+                }
+            } catch (error) {
+                showStatus('❌ Error: ' + error.message, 'error');
+            }
+        }
+
+        async function undoLast() {
+            try {
+                const response = await fetch('/api/undo-last', {
+                    method: 'POST'
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showStatus(`↶ Removed: ${result.removed}`, 'success');
+                    setTimeout(() => loadNextImage(), 500);
+                } else {
+                    showStatus('⚠️ Nothing to undo', 'error');
+                }
+            } catch (error) {
+                showStatus('❌ Error: ' + error.message, 'error');
+            }
+        }
+
+        function updateStats(data) {
+            document.getElementById('statLabeled').textContent = data.labeled;
+            document.getElementById('statRemaining').textContent = data.remaining;
+            document.getElementById('statTotal').textContent = data.total;
+            
+            const percentage = data.total > 0 ? (data.labeled / data.total) * 100 : 0;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        }
+
+        function showStatus(message, type) {
+            const element = document.getElementById('statusMessage');
+            element.textContent = message;
+            element.className = `status-message ${type}`;
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    element.style.display = 'none';
+                }, 2000);
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initializeApp);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "labels": [
+    {
+      "filename": "312.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Black", "Nude", "Beige"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Dots"],
+      "embellishments": ["None"],
+      "vibe": ["Bold", "Artistic"]
+    },
+    {
+      "filename": "313.jpg",
+      "shape": "Square",
+      "length": "Short",
+      "color": ["Green"],
+      "color_scheme": "Solid",
+      "finish": ["Matte"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "AccentNail",
+      "art_type": ["Leaves"],
+      "embellishments": ["None"],
+      "vibe": ["Natural", "Minimalist"]
+    },
+    {
+      "filename": "314.jpg",
+      "shape": "Coffin",
+      "length": "Long",
+      "color": ["White", "Brown", "Purple"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Marble"],
+      "embellishments": ["None"],
+      "vibe": ["Artistic", "Edgy"]
+    },
+    {
+      "filename": "315.jpg",
+      "shape": "Squoval",
+      "length": "Short",
+      "color": ["Nude", "Pink", "White"],
+      "color_scheme": "Duo",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "Classic",
+      "set_style": "Uniform",
+      "art_type": ["None"],
+      "embellishments": ["None"],
+      "vibe": ["Elegant", "Natural", "Romantic"]
+    }
+  ]
+}

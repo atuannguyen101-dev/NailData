@@ -1,0 +1,60 @@
+{
+  "labels": [
+    {
+      "image": "220.jpg",
+      "shape": "Square",
+      "length": "Medium",
+      "color": ["Pink", "Nude"],
+      "color_scheme": "Solid",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": ["None"],
+      "embellishments": ["None"],
+      "vibe": ["Natural", "Elegant"]
+    },
+    {
+      "image": "221.jpg",
+      "shape": "Coffin",
+      "length": "Long",
+      "color": ["White", "Pink", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "AccentNail",
+      "art_type": ["Marble", "Abstract"],
+      "embellishments": ["Foil"],
+      "vibe": ["Elegant", "Glamorous"]
+    },
+    {
+      "image": "222.jpg",
+      "shape": "Coffin",
+      "length": "Medium",
+      "color": ["White", "Black", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Geometric"],
+      "embellishments": ["Charms", "Crystals"],
+      "vibe": ["Bold", "Edgy", "Glamorous"]
+    },
+    {
+      "image": "223.jpg",
+      "shape": "Almond",
+      "length": "Medium",
+      "color": ["Nude", "Blue", "Pink"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "Alternating",
+      "art_type": ["Abstract", "Swirls"],
+      "embellishments": ["None"],
+      "vibe": ["Artistic", "Bold"]
+    }
+  ]
+}
