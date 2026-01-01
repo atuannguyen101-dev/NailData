@@ -447,6 +447,62 @@
       "art_type": [],
       "embellishments": [],
       "vibe": ["Elegant", "Natural"]
+    },
+    {
+      "image": "832.jpg",
+      "shape": "Square",
+      "length": "Short",
+      "color": ["Black", "Nude", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "AccentNail",
+      "art_type": ["Geometric"],
+      "embellishments": ["Foil"],
+      "vibe": ["Edgy", "Glamorous"]
+    },
+    {
+      "image": "833.jpg",
+      "shape": "Almond",
+      "length": "Medium",
+      "color": ["Nude", "Gold"],
+      "color_scheme": "Duo",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "Colored",
+      "set_style": "Uniform",
+      "art_type": [],
+      "embellishments": [],
+      "vibe": ["Elegant", "Natural"]
+    },
+    {
+      "image": "834.jpg",
+      "shape": "Coffin",
+      "length": "Medium",
+      "color": ["White", "Black", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": ["LineArt"],
+      "embellishments": ["Foil"],
+      "vibe": ["Cute", "Artistic"]
+    },
+    {
+      "image": "835.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Brown", "Gold", "Orange"],
+      "color_scheme": "Multi",
+      "finish": ["Chrome", "Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Abstract"],
+      "embellishments": ["3DSculpture", "Charms", "Crystals"],
+      "vibe": ["Glamorous", "Bold"]
     }
   ]
 }

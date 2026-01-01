@@ -223,6 +223,62 @@
       "art_type": ["Floral"],
       "embellishments": [],
       "vibe": ["Autumn", "Cute"]
+    },
+    {
+      "image": "916.jpg",
+      "shape": "Square",
+      "length": "Short",
+      "color": ["Nude", "Pink", "Black"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "Colored",
+      "set_style": "Uniform",
+      "art_type": [],
+      "embellishments": [],
+      "vibe": ["Elegant", "Classic"]
+    },
+    {
+      "image": "917.jpg",
+      "shape": "Almond",
+      "length": "Medium",
+      "color": ["Pink"],
+      "color_scheme": "Solid",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": [],
+      "embellishments": [],
+      "vibe": ["Elegant", "Romantic"]
+    },
+    {
+      "image": "918.jpg",
+      "shape": "Round",
+      "length": "Short",
+      "color": ["Pink", "Blue", "Orange", "Black", "Red"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Abstract"],
+      "embellishments": [],
+      "vibe": ["Artistic", "Edgy"]
+    },
+    {
+      "image": "919.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Brown", "Pink"],
+      "color_scheme": "Solid",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": [],
+      "embellishments": [],
+      "vibe": ["Elegant", "Natural"]
     }
   ]
 }
