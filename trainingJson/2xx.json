@@ -111,6 +111,62 @@
       "art_type": ["None"],
       "embellishments": ["None"],
       "vibe": ["Natural", "Minimalist"]
+    },
+    {
+      "image": "228.jpg",
+      "shape": "Coffin",
+      "length": "Long",
+      "color": ["White", "Orange", "Pink", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Floral", "Abstract"],
+      "embellishments": ["Charms"],
+      "vibe": ["Artistic", "Bold", "Cute"]
+    },
+    {
+      "image": "229.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Black", "Green", "White"],
+      "color_scheme": "Multi",
+      "finish": ["Matte", "Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "Alternating",
+      "art_type": ["Leaves"],
+      "embellishments": ["None"],
+      "vibe": ["Bold", "Artistic", "Edgy"]
+    },
+    {
+      "image": "230.jpg",
+      "shape": "Coffin",
+      "length": "Medium",
+      "color": ["Nude", "Pink", "White"],
+      "color_scheme": "Duo",
+      "finish": ["Glossy", "Shimmer"],
+      "complexity": "Minimal",
+      "french_tip": "Micro",
+      "set_style": "Uniform",
+      "art_type": ["None"],
+      "embellishments": ["None"],
+      "vibe": ["Elegant", "Natural", "Romantic"]
+    },
+    {
+      "image": "231.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Nude", "White"],
+      "color_scheme": "Duo",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "Classic",
+      "set_style": "Uniform",
+      "art_type": ["None"],
+      "embellishments": ["None"],
+      "vibe": ["Natural", "Elegant"]
     }
   ]
 }
