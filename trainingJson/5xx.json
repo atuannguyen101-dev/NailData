@@ -111,6 +111,62 @@
       "art_type": [],
       "embellishments": [],
       "vibe": ["Elegant"]
+    },
+    {
+      "image": "52.jpg",
+      "shape": "Squoval",
+      "length": "Short",
+      "color": ["Blue"],
+      "color_scheme": "Solid",
+      "finish": ["Glossy", "Chrome"],
+      "complexity": "Minimal",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": [],
+      "embellishments": [],
+      "vibe": ["Bold"]
+    },
+    {
+      "image": "53.jpg",
+      "shape": "Square",
+      "length": "Short",
+      "color": ["Black", "Nude", "Blue", "Green", "Yellow", "Orange", "Pink", "Red"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "Alternating",
+      "art_type": ["Abstract", "LineArt"],
+      "embellishments": [],
+      "vibe": ["Bold", "Artistic"]
+    },
+    {
+      "image": "54.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Nude", "White", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy", "Shimmer"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": ["Stars"],
+      "embellishments": ["Foil"],
+      "vibe": ["Elegant", "Romantic"]
+    },
+    {
+      "image": "55.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Nude", "Blue", "Purple", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy", "Shimmer"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": ["Ombre", "Stars"],
+      "embellishments": ["Foil"],
+      "vibe": ["Elegant", "Artistic"]
     }
   ]
 }

@@ -167,6 +167,62 @@
       "art_type": ["AnimalPrint", "LineArt"],
       "embellishments": ["None"],
       "vibe": ["Trendy", "Edgy", "Glam"]
+    },
+    {
+      "image": "41.jpg",
+      "shape": "Almond",
+      "length": "Medium",
+      "color": ["Blue", "White", "Orange", "Gold"],
+      "color_scheme": "Multi",
+      "finish": ["Glossy"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "Uniform",
+      "art_type": ["Marble", "Swirls", "Abstract"],
+      "embellishments": ["None"],
+      "vibe": ["Artistic", "Bold"]
+    },
+    {
+      "image": "42.jpg",
+      "shape": "Almond",
+      "length": "Long",
+      "color": ["Black", "Gold"],
+      "color_scheme": "Duo",
+      "finish": ["Matte", "Glitter"],
+      "complexity": "Maximal",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["Abstract"],
+      "embellishments": ["Crystals"],
+      "vibe": ["Glamorous", "Edgy", "Bold"]
+    },
+    {
+      "image": "43.jpg",
+      "shape": "Almond",
+      "length": "Medium",
+      "color": ["Pink", "Purple", "Silver"],
+      "color_scheme": "Multi",
+      "finish": ["Chrome", "Glitter"],
+      "complexity": "Moderate",
+      "french_tip": "None",
+      "set_style": "AllDifferent",
+      "art_type": ["None"],
+      "embellishments": ["None"],
+      "vibe": ["Glamorous", "Bold", "Edgy"]
+    },
+    {
+      "image": "44.jpg",
+      "shape": "Coffin",
+      "length": "XLong",
+      "color": ["Nude", "Beige", "White"],
+      "color_scheme": "Duo",
+      "finish": ["Glossy"],
+      "complexity": "Minimal",
+      "french_tip": "Classic",
+      "set_style": "Uniform",
+      "art_type": ["None"],
+      "embellishments": ["None"],
+      "vibe": ["Natural", "Elegant", "Minimalist"]
     }
   ]
 }
